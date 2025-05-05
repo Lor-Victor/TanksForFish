@@ -1,14 +1,22 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary" id="tff-nav">
-    <a class="navbar-brand  tff-logo" href="/products/all">
+    <a class="navbar-brand  tff-logo" href="/home">
         <img id="tanks-for-fish-logo" src="/images/fish_tank3.png" alt="fish for tanks">
     </a>
     <div class="container-fluid">
-        <a class="navbar-brand title" id="single-day-regular-id" href="/products/all">Tanks For Fish</a>
+        <a class="navbar-brand title" id="single-day-regular-id" href="/home">Tanks For Fish</a>
         <form class="d-flex search" role="search" method="get" action="/products">
             <input class="form-control me-2" type="search" name="value" placeholder="Search by name" aria-label="Search">
             <input type="hidden" name="attribute" value="category">
             <button class="btn btn-outline-success nav-search-button" type="submit">Search</button>
         </form>
-        <a id="cart" href="cart.html"><img id="shopping-cart" alt="shopping cart" src="/images/shopping_cart.png"> View My Cart</a>
+        <div id="user-buttons">
+            <% if (typeof user != 'undefined') {%>
+                <a id="cart" href="/cart/view"><img id="shopping-cart" alt="shopping cart" src="/images/shopping_cart.png"> View My Cart</a>
+                <a id="logout" href="/auth/logout">Logout</a>
+            <% } else { %>
+                <a id="login" href="/auth/google">Login</a>
+            <% } %>
+        </div>
+        
     </div>
 </nav>

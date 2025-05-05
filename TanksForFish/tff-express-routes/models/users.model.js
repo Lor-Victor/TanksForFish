@@ -9,10 +9,13 @@ function getUserById(id) {
 }
 
 function createNewUser(params) {
-  let sql = 'INSERT INTO users ("google_id","display_name","first_name","last_name","email") VALUES (?,?,?,?,?);';
+  let sql = `INSERT INTO users  (google_id, display_name, first_name, last_name, email, role) 
+     VALUES (?, ?, ?, ?, ?, ?)`;
   const info = db.run(sql, params);
+
   return info;
 }
+
 
 
 module.exports = {

@@ -36,7 +36,11 @@
                 <h5><%= product.name%></h5>
                 <p><%= product.description %></p>
                 <h6 id="price">Price: <%=product.price%></h6>
-                <button id="cart-btn">Add to Cart</button>
+                <form method="POST" action="/cart/add">
+                    <input type="hidden" name="product_id" value="<%= product.product_id %>">
+                    <input type="number" name="quantity" value="1" min="1" required>
+                    <button type="submit" id="cart-btn">Add to Cart</button>
+                  </form>                  
             </div>
         </div>
     </main>

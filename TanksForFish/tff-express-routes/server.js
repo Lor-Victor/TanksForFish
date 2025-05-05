@@ -25,16 +25,24 @@ app.set("views", __dirname + "/views");
 
 const adminRoutes = require("./routes/admin.route");
 const productRoutes = require("./routes/tff.route");
+const cartRoutes = require("./routes/cart.route");
+const authRoutes = require("./auth/auth.route");
 
 const { db_close } = require("./models/db-conn");
 
 app.use("/products", productRoutes);
 app.use("/admin", adminRoutes);
+app.use('/auth', authRoutes);
+app.use("/cart", cartRoutes);
+
+const tffController = require("./controllers/tff.controller");
+
+app.get("/home", tffController.home);
 
 app.get("/", (req, res) => {
-    res.redirect("/products/all");
+  req.session.returnTo = req.originalUrl;
+  res.render("home", { title: 'Home Page', user: req.user });
 });
-
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, function () {
   console.log("App listening at http://localhost:" + PORT);
