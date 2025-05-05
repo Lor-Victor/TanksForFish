@@ -1,0 +1,50 @@
+<%- include('./partials/head')%>
+<link href="/css/admin.css" rel="stylesheet">
+<script src="/scripts/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="tff-nav">
+            <a class="navbar-brand  tff-logo" href="/admin/all">
+              <img id="tanks-for-fish-logo" src="/images/fish_tank3.png" alt="tanks for fish">
+            </a>
+            <div class="container-fluid">
+              <a class="navbar-brand title" id="single-day-regular-id" href="/admin/all">Tanks For Fish</a>
+            </div>
+            <a class="home-links" href="/admin/upload">Bulk Upload </a>
+            <!-- <a class="home-links" href="#">Sign Out</a> -->
+          </nav>
+    </header>
+    <main id="home-main">
+        <h1 id="product-listing-heading">Product Listing</h1>
+                <table class="table table-hover listing-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Product ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productList.forEach(product => { %>
+                        <tr>
+                            <th scope="row"><img class="listing-image" src="<%=product.image_url%>" alt="<%=product.name%>"></th>
+                            <td><%= product.product_id %></td>
+                            <td><%= product.name %></td>
+                            <td><%= product.category %></td>
+                            <td><%= product.price %></td>
+                            <td><a href="/admin/edit/<%= product.product_id%>" class="btn btn-primary edit-btn">Edit</a></td>
+                            <td><button class="btn btn-danger delete-btn" data-id="<%= product.product_id %>" data-name="<%= product.name %>">Delete</button></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+</body>

@@ -1,0 +1,127 @@
+html, body{
+    background-image: none;
+}
+#tff-nav .home-links{
+    margin-right: 20px;
+}
+#home-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#product-listing-heading, #product-edit-heading, #upload-heading{
+    margin-top: 20px;
+    font-weight: bolder;
+    text-align: center;
+}
+#home-container{
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-top: 50px;
+    width: 25%;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    
+}
+.home-links{
+    text-decoration: none;
+    font-size: larger;
+}
+.listing-table{
+    width: 98%;
+    padding: 5%;
+}
+.listing-image{
+    width: 100px;
+}
+.listing-action-btn{
+    text-decoration: none;
+    color:black;
+    border-radius: 2%;
+    border-style: solid;
+    padding: 10%;
+    border-radius: 5px;
+    background-color: rgb(189, 236, 245);
+}
+.listing-action-btn:hover{
+    background-color: rgb(150, 210, 250);
+}
+#product-edit-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#product-edit-container{
+    background-color: rgb(247, 243, 238);
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    width: 95%;
+}
+.form-row{
+    display:flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#product-description{
+    text-align: left;
+    white-space:pre-wrap;
+    resize: vertical;
+}
+#edit-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#delete-edit-btn{
+    margin-top: 20px;
+    color: black;
+    border-radius: 2%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(250, 164, 164);
+}
+#delete-edit-btn:hover{
+    background-color: rgb(225, 118, 130);
+}
+#save-edit-btn,#upload-btn, #single-upload-btn{
+    margin-top: 20px;
+    color: black;
+    border-radius: 2%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(189, 236, 245);
+}
+#single-upload-btn{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#save-edit-btn:hover, #upload-btn:hover, #single-upload-btn:hover{
+    background-color: rgb(150, 210, 250);
+}
+#upload-form{
+    margin-top: 2%;
+}
+#file-format{
+    margin-top: 5px;
+    font-size: small;
+}
+#single-upload-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+}

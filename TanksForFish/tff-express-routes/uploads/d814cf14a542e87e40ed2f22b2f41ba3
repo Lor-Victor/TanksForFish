@@ -1,0 +1,167 @@
+[
+  {
+    "category": "Tanks",
+    "model": "MarineLand 5G",
+    "name": "5 Gallon Portrait Glass Aquarium",
+    "description": "Stylish portrait-style tank with LED light and filtration.",
+    "price": 59.99,
+    "dimensions": "11.8x11.6x17 inches",
+    "material": "Glass",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/71jKM8I6APL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Tanks",
+    "model": "Tetra 20G",
+    "name": "20 Gallon Complete Aquarium Kit",
+    "description": "Comes with LED hood, heater, filter, and decorations.",
+    "price": 109.99,
+    "dimensions": "24x12x16 inches",
+    "material": "Glass",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/81pwh9avkzL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Tanks",
+    "model": "Aqueon 2.5G",
+    "name": "2.5 Gallon Mini Bow Tank",
+    "description": "Compact tank for desktops or small spaces.",
+    "price": 27.49,
+    "dimensions": "12.25x6.25x8.25 inches",
+    "material": "Acrylic",
+    "color": "Clear/Black",
+    "image_url": "https://m.media-amazon.com/images/I/71m7xbHwQTL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Substrates",
+    "model": "CaribSea Eco",
+    "name": "Eco-Complete Planted Aquarium Substrate",
+    "description": "Nutrient-rich substrate ideal for live plants.",
+    "price": 24.95,
+    "dimensions": "20 lb bag",
+    "material": "Volcanic basalt",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/71U8akOSsJL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Substrates",
+    "model": "Fluval Stratum",
+    "name": "Fluval Plant and Shrimp Stratum",
+    "description": "Great substrate for shrimp tanks and planted aquariums.",
+    "price": 16.99,
+    "dimensions": "4.4 lb bag",
+    "material": "Mineral-rich volcanic soil",
+    "color": "Brown/Black",
+    "image_url": "https://m.media-amazon.com/images/I/71CJxg8K-PL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Substrates",
+    "model": "Seachem Flourite",
+    "name": "Seachem Flourite Natural Substrate",
+    "description": "Porous clay gravel substrate for planted aquariums.",
+    "price": 22.39,
+    "dimensions": "15.4 lb bag",
+    "material": "Porous clay",
+    "color": "Natural",
+    "image_url": "https://m.media-amazon.com/images/I/81Z7A4fWxzL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Electricals",
+    "model": "Hygger HG-981",
+    "name": "Hygger Submersible Aquarium Heater 100W",
+    "description": "Accurate and safe heater with external controller.",
+    "price": 22.99,
+    "dimensions": "6.5 inches long",
+    "material": "Quartz glass",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/61dZMQzJzWL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Electricals",
+    "model": "NICREW LED",
+    "name": "NICREW ClassicLED Aquarium Light",
+    "description": "LED lighting for freshwater aquariums with extendable brackets.",
+    "price": 29.99,
+    "dimensions": "18-24 inches adjustable",
+    "material": "Aluminum/plastic",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/71DwZgtIMWL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Electricals",
+    "model": "Tetra Whisper",
+    "name": "Tetra Whisper Air Pump for Aquariums",
+    "description": "Reliable air pump for 10 to 30 gallon tanks.",
+    "price": 14.89,
+    "dimensions": "5.5x3x2.5 inches",
+    "material": "Plastic",
+    "color": "Blue",
+    "image_url": "https://m.media-amazon.com/images/I/61NBqU9jhwL._AC_SL1000_.jpg"
+  },
+  {
+    "category": "Food",
+    "model": "TetraMin Flakes",
+    "name": "TetraMin Tropical Flakes",
+    "description": "Nutritious daily food for all tropical fish.",
+    "price": 6.79,
+    "dimensions": "2.2 oz container",
+    "material": "Fish food",
+    "color": "Yellow flakes",
+    "image_url": "https://m.media-amazon.com/images/I/81fK8Jnb0fL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Food",
+    "model": "Hikari Sinking Wafers",
+    "name": "Hikari Tropical Sinking Wafers",
+    "description": "Perfect for bottom feeders like corydoras and loaches.",
+    "price": 4.99,
+    "dimensions": "1.76 oz bag",
+    "material": "Fish food",
+    "color": "Brown wafers",
+    "image_url": "https://m.media-amazon.com/images/I/71GySlgvNEL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Food",
+    "model": "Omega One Betta",
+    "name": "Omega One Betta Buffet Pellets",
+    "description": "High-protein floating pellets for bettas.",
+    "price": 3.49,
+    "dimensions": "0.95 oz jar",
+    "material": "Fish food",
+    "color": "Red pellets",
+    "image_url": "https://m.media-amazon.com/images/I/71m+KYTwPEL._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Filters & Filter Media",
+    "model": "AquaClear 20",
+    "name": "AquaClear Power Filter 20",
+    "description": "Efficient hang-on-back filter for 5-20 gallon tanks.",
+    "price": 29.95,
+    "dimensions": "6.5x4.7x5.1 inches",
+    "material": "Plastic",
+    "color": "Black/Transparent",
+    "image_url": "https://m.media-amazon.com/images/I/81FKeuNnh6L._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Filters & Filter Media",
+    "model": "Fluval Foam",
+    "name": "Fluval Edge Pre-Filter Foam",
+    "description": "Prevents small or weak-swimming fish from being pulled into filter.",
+    "price": 5.29,
+    "dimensions": "2-pack",
+    "material": "Foam",
+    "color": "Black",
+    "image_url": "https://m.media-amazon.com/images/I/71UrO5iNU8L._AC_SL1500_.jpg"
+  },
+  {
+    "category": "Filters & Filter Media",
+    "model": "Seachem Matrix",
+    "name": "Seachem Matrix Bio Media",
+    "description": "High-capacity bio-media for biological filtration.",
+    "price": 12.99,
+    "dimensions": "1 liter bag",
+    "material": "Porous pumice stone",
+    "color": "White/gray",
+    "image_url": "https://m.media-amazon.com/images/I/71lVp+6+8FL._AC_SL1500_.jpg"
+  }
+]

@@ -1,0 +1,46 @@
+<%- include('./partials/head') %>
+    <link href="/css/products.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <%- include('./partials/nav')%>
+                <div id="product-categories">
+                    <div class="products"><a href="/products?attribute=category&value=Tanks">
+                            Tanks
+                        </a></div>
+                    <div class="products"><a href="/products?attribute=category&value=Filters%20%26%20Filter%20Media">
+                            Filters & Filter Media
+                        </a></div>
+                    <div class="products"><a href="/products?attribute=category&value=Substrates">
+                            Substrates
+                        </a></div>
+                    <div class="products"><a href="/products?attribute=category&value=Electricals">
+                            Electricals
+                        </a></div>
+                    <div class="products"><a href="/products?attribute=category&value=Food">
+                            Food
+                        </a></div>
+                </div>
+        </header>
+        <main>
+            <div id="main-product-container">
+                <% productList.forEach(product=> { %>
+                    <div class="card product-card">
+                        <img src="<%= product.image_url %>" class="card-img-top product-image"
+                            alt="<%= product.name %>">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=product.name %>
+                            </h5>
+                            <p class="card-text">
+                                <%=product.description %>
+                            </p>
+                            <a href="/products/<%= product.product_id %>" class="btn btn-primary product-btn">View Details</a>
+                        </div>
+                    </div>
+                    <%})%>
+            </div>
+        </main>
+        <%- include('./partials/footer')%>
+    </body>

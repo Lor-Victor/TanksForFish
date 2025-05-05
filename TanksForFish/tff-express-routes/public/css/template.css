@@ -1,0 +1,68 @@
+html, body {
+    height: 100%; 
+    margin: 0;    
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(../images/water-bubble.png);
+    background-repeat: repeat;
+    background-size:cover;
+    background-color: rgb(197, 223, 249);
+    background-size: 300px 300px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+#cart{
+    text-decoration: none;
+    color: black;
+}
+#cart:hover{
+    color: blue;
+}
+#tff-nav{
+    background-color: #a9ddff !important;
+}
+.title{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: bolder;
+    font-size:35px;
+}
+.tff-logo{
+    margin-left: 1%;
+    margin-right: 0;
+}
+#tanks-for-fish-logo{
+    width:35px;
+    height: 35px;
+}
+.nav-search-button{
+    border-color: rgb(100, 151, 253);
+    color: rgb(73, 133, 253);
+    
+}
+.nav-search-button:hover{
+    background-color: rgb(76, 151, 250);
+    border-color: rgb(105, 153, 249);
+}
+#shopping-cart{
+    height: 30px;
+    padding-right: 10px;
+}
+#cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#single-day-regular-id {
+    font-family: "Single Day", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #a9ddff; 
+    color: black;      
+    text-align: center; 
+}

@@ -1,0 +1,45 @@
+<%- include('./partials/head')%>
+<link href="/css/details.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/nav')%>
+    </header>
+    <main>
+        <div id="product-detail-container">
+            <div id="product-img-table">
+                <img src="<%= product.image_url %>" alt="<%= product.name %>">
+                <p id="product-info-header">Product Information</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Model</th>
+                            <td><%= product.model %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dimensions</th>
+                            <td><%= product.dimensions %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Material</th>
+                            <td><%= product.material %></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Color</th>
+                            <td><%= product.color %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="product-description">
+                <h5><%= product.name%></h5>
+                <p><%= product.description %></p>
+                <h6 id="price">Price: <%=product.price%></h6>
+                <button id="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer')%>
+</body>
+

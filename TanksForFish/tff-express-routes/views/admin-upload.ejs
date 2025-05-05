@@ -1,0 +1,71 @@
+<%- include('./partials/head')%>
+<link href="/css/admin.css" rel="stylesheet">
+<script src="/scripts/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="tff-nav">
+            <a class="navbar-brand  tff-logo" href="/admin/all">
+              <img id="tanks-for-fish-logo" src="/images/fish_tank3.png" alt="tanks for fish">
+            </a>
+            <div class="container-fluid">
+              <a class="navbar-brand title" id="single-day-regular-id" href="/admin/all">Tanks For Fish</a>
+            </div>
+            <a class="home-links" href="/admin/all">View Products</a>
+            <!-- <a class="home-links" href="#">Sign Out</a> -->
+          </nav>
+    </header>
+    <main id="home-main">
+        <h1 class="upload-heading">Bulk Upload</h1>
+        <form id="upload-form" method="POST" action="/admin/upload/file" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Select a file to upload</label>
+                <input class="form-control" type="file" id="formFile" name="uploadFile" accept=".json">
+                <p id="file-format">Accepted file format: JSON</p>
+                <button id="upload-btn">Upload</button>
+              </div>
+        </form>
+        <h1 class="upload-heading">Upload Single Product</h1>
+        <form method="POST" action="/admin/product/add" id="single-upload-form">
+            <div class="form-row">
+              <label for="category-name">Category Name:</label>
+              <input type="text" id="category-name" name="category-name" required>
+            </div>
+            <div class="form-row">
+              <label for="product-model">Model:</label>
+              <input type="text" id="product-model" name="product-model" required>
+            </div>
+            <div class="form-row">
+              <label for="product-name">Product Name:</label>
+              <input type="text" id="product-name" name="product-name" required>
+            </div>
+            <div class="form-row">
+              <label for="product-description">Description:</label>
+              <textarea id="product-description" name="product-description" required></textarea>
+            </div>
+            <div class="form-row">
+              <label for="product-price">Price:</label>
+              <input type="number" step="0.01" id="product-price" name="product-price" required>
+            </div>
+            <div class="form-row">
+              <label for="product-dimensions">Dimensions:</label>
+              <input type="text" id="product-dimensions" name="product-dimensions" required>
+            </div>
+            <div class="form-row">
+              <label for="product-material">Material:</label>
+              <input type="text" id="product-material" name="product-material" required>
+            </div>
+            <div class="form-row">
+              <label for="product-color">Color:</label>
+              <input type="text" id="product-color" name="product-color" required>
+            </div>
+            <div class="form-row">
+              <label for="product-image">Image URL:</label>
+              <input type="text" id="product-image" name="product-image" required>
+            </div>
+            <div class="form-row">
+              <button type="submit" id="single-upload-btn">Submit Product</button>
+            </div>
+          </form>
+    </main>
+</body>
