@@ -29,6 +29,13 @@ passport.serializeUser((user, done) => {
     done(null, user);
 });
 
-passport.deserializeUser((obj, done) => {
-    done(null, obj);
-});
+passport.deserializeUser((user, done) => {
+    // pull from DB using Google ID
+    const dbUser = userModel.getUserByGoogleId(user.id);
+    if (dbUser) {
+      done(null, dbUser); // dbUser contains user_id from your DB
+    } else {
+      done(new Error("User not found"));
+    }
+  });
+  

@@ -1,0 +1,13 @@
+#confirm-main{
+    background-color: white;
+    padding: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    border-radius: 5px;
+}
+#confirm-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

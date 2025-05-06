@@ -44,10 +44,6 @@ function getProductById(req, res, next) {
   }
 }
 
-
-
-
-
 module.exports = {
   home,
   getAll,

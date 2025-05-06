@@ -15,10 +15,15 @@ function createNewUser(params) {
 
   return info;
 }
+function getUserByGoogleId(googleId) {
+  const sql = `SELECT * FROM users WHERE google_id = ?`;
+  return db.prepare(sql).get(googleId);
+}
 
 
 
 module.exports = {
   getUserById,
-  createNewUser
+  createNewUser,
+  getUserByGoogleId
 };

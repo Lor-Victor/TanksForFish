@@ -1,51 +1,89 @@
 <%- include('./partials/head')%>
-<link href="/css/cart.css" rel="stylesheet">
-<script src="/scripts/cart.js" defer></script>
-</head>
-<body>
-    <header>
-        <%- include('./partials/nav')%>
-    </header>
-    <main>
-        <section id="cart-container">
-            <h3>Shopping Cart</h3>
-            <% if (cart.length === 0) { %>
-                <p>Your cart is empty.</p>
-            <% } else { %>
-                <% cart.forEach(item => { %>
-                    <div class="cart-item">
-                        <img src="<%= item.image_url %>" alt="<%= item.name %>">
-                        <div class="item-info">
-                            <p class="item-name"><%= item.name %></p>
-                            <p class="item-price">$<%= item.price.toFixed(2) %></p>
-                        </div>
-                        <form method="POST" action="/cart/update">
-                            <input type="hidden" name="product_id" value="<%= item.product_id %>">
-                            <button type="submit" name="action" value="decrease" class="minus-btn">-</button>
-                            <div class="quantity"> <%= item.quantity %> </div>
-                            <button type="submit" name="action" value="increase" class="add-btn">+</button>
-                        </form>
-                    </div>
-                <% }); %>
-            <% } %>
-        </section>
+    <link href="/css/cart.css" rel="stylesheet">
+    <script src="/scripts/cart.js" defer></script>
+    </head>
 
-        <aside id="total-container">
-            <p id="total-text">Total: $ <span id="total"><%= total.toFixed(2) %></span></p>
-            <p>Delivery option:</p>
-            <form id="delivery-pickup-form">
-                <input type="radio" id="delivery" name="delivery-option" value="delivery">
-                <label for="delivery">Delivery ($15 charge)</label><br>
+    <body>
+        <header>
+            <%- include('./partials/nav')%>
+        </header>
+        <main>
+            <section id="cart-container">
+                <h3>Shopping Cart</h3>
+                <% if (cart.length===0) { %>
+                    <p>Your cart is empty.</p>
+                    <% } else { %>
+                        <% cart.forEach(item=> { %>
+                            <div class="cart-item">
+                                <img src="<%= item.image_url %>" alt="<%= item.name %>">
+                                <div class="item-info">
+                                    <p class="item-name">
+                                        <%= item.name %>
+                                    </p>
+                                    <p class="item-price">$<%= item.price.toFixed(2) %>
+                                    </p>
+                                </div>
+                                <form method="POST" action="/cart/update" class="quantity-form">
+                                    <input type="hidden" name="product_id" value="<%= item.product_id %>">
+                                    <button type="submit" name="action" value="decrease" class="minus-btn">-</button>
+                                    <div class="quantity">
+                                        <%= item.quantity %>
+                                    </div>
+                                    <button type="submit" name="action" value="increase" class="add-btn">+</button>
+                                </form>
+                                <form method="POST" action="/cart/remove" class="remove-form">
+                                    <input type="hidden" name="product_id" value="<%= item.product_id %>">
+                                    <button type="submit" class="remove-btn">Remove</button>
+                                </form>
+                            </div>
+                            <% }); %>
+                                <% } %>
+            </section>
+            <aside id="aside">
+                <div id="total-container">
+                  <div id="total-content">
+                    <h4>Order Summary</h4>
+                    <p id="total-text">Total: $ <span id="total"><%= total.toFixed(2) %></span></p>
+              
+                    <form id="checkout-form" method="POST" action="/cart/checkout">
+                      <p>Delivery option:</p>
+                      <input type="radio" id="delivery" name="deliveryOption" value="delivery" required>
+                      <label for="delivery">Delivery ($15 charge)</label><br>
+              
+                      <input type="radio" id="pick-up" name="deliveryOption" value="pick-up">
+                      <label for="pick-up">Pick-up</label><br>
+              
+                      <p class="footnote">* 6.75% tax applied after picking delivery option</p>
+              
+                      <h4>Delivery Address</h4>
+                      <p class="footnote">* Needed even for pick-up order (verification purposes)</p>
+                      <label for="name">Name:</label><br>
+                      <input type="text" id="name" name="name" value="<%= user ? user.display_name : '' %>" required><br>
+              
+                      <label for="street">Address:</label><br>
+                      <input type="text" id="street" name="street" required><br>
+              
+                      <label for="city">City:</label><br>
+                      <input type="text" id="city" name="city" required><br>
+              
+                      <label for="state">State:</label><br>
+                      <input type="text" id="state" name="state" required><br>
+              
+                      <label for="zip">Zip Code:</label><br>
+                      <input type="text" id="zip" name="zip_code" required><br>
+              
+                      <input type="hidden" name="user_id" value="<%= user ? user.user_id : '' %>">
+                      <input type="hidden" name="country" value="USA">
+              
+                      <button id="checkout-btn" type="submit">Checkout</button>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+              
+        </main>
 
-                <input type="radio" id="pick-up" name="delivery-option" value="pick-up">
-                <label for="pick-up">Pick-up</label><br>
-            </form>
-            <button id="checkout-btn"> Checkout </button>
-            <p id="total-footnote">* 6.75% tax </p>
-        </aside>
-    </main>
-
-    <footer>
-        1201 Battleground Ave, Greensboro, NC 27408
-    </footer>
-</body>
+        <footer>
+            1201 Battleground Ave, Greensboro, NC 27408
+        </footer>
+    </body>

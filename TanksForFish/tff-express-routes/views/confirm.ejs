@@ -1,0 +1,39 @@
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/confirm.css">
+</head>
+<body>
+  <header>
+    <%- include('./partials/nav') %>
+  </header>
+
+  <main id="confirm-main">
+    <h2>Order Confirmation</h2>
+
+    <section id="confirm-message">
+      <p>Thank you, <strong><%= user.display_name %></strong>! Your order has been received.</p>
+    </section>
+
+    <section id="order-summary">
+      <h4>Order Summary</h4>
+      <ul id="order-items">
+        <% cart.forEach(item => { %>
+          <li>
+            <span><%= item.name %> (x<%= item.quantity %>)</span>
+            <span>$<%= (item.price * item.quantity).toFixed(2) %></span>
+          </li>
+        <% }); %>
+      </ul>
+      <p id="order-total">Total: $<strong><%= total.toFixed(2) %></strong></p>
+      <p id="order-delivery">Delivery Method: <strong><%= deliveryOption %></strong></p>
+    </section>
+
+    <section id="confirm-actions">
+      <a href="/products/all" class="btn btn-outline-primary">Continue Shopping</a>
+      <a href="/" class="btn btn-success">Return to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    1201 Battleground Ave, Greensboro, NC 27408
+  </footer>
+</body>

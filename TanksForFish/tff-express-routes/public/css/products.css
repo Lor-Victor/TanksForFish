@@ -15,6 +15,10 @@ main {
     border: 1px solid gray;
     text-align: center;
 }
+.products a {
+    text-decoration: none;
+    color: black;
+}
 
 .products:hover {
     background-color: rgb(150, 210, 250);
@@ -38,20 +42,22 @@ main {
     margin-bottom: 5px;
     width: 260px;
     height: 290px;
+    border-color: rgb(179, 179, 179);
 }
 
 .product-image {
     width: 100px;
     height: 100px;
     align-self: center;
+    margin-top: 10px;
 }
 
 .card-text {
     overflow: hidden;
     display: -webkit-box; /* Required for -webkit-line-clamp */
-    -webkit-line-clamp: 3; /* For older WebKit browsers */
+    -webkit-line-clamp: 2; /* For older WebKit browsers */
     -webkit-box-orient: vertical; /* Required for -webkit-line-clamp */
-    line-clamp: 3;         /* Standard property */
+    line-clamp: 2;         /* Standard property */
     -moz-box-orient: vertical; /* For older Firefox versions (less common for line-clamp) */
   }
 
@@ -59,7 +65,8 @@ main {
     background-color: rgb(189, 236, 245);
     color: rgb(48, 19, 19);
     border: solid 1px;
-    place-self: end;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 .product-btn:hover {

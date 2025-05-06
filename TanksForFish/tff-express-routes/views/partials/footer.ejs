@@ -1,7 +1,8 @@
 <footer>
-    <% if (typeof user != 'undefined') {%>
-        1201 Battleground Ave, Greensboro, NC 27408 <a href="/admin/all">Admin</a>
+    <% if (typeof user !== 'undefined' && user && user.role === 'admin') { %>
+      1201 Battleground Ave, Greensboro, NC 27408 <a href="/admin/all">Admin</a>
     <% } else { %>
-        1201 Battleground Ave, Greensboro, NC 27408 
+      1201 Battleground Ave, Greensboro, NC 27408
     <% } %>
-</footer>
+  </footer>
+  
