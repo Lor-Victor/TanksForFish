@@ -18,28 +18,22 @@
    * Changed "Model" to "model"
    * Changed categories table to only have name (dropped id)
 
-## <ins>Available Endpoints</ins>
+## <ins>Running the Application</ins>
 
-### GET Requests
+### Guest
+* **Guest user is the default**
+     *You can use the search for fish API.
+     *You can browse the products and get them by category.
+     * **Unable** to view the products in detail.
 
-* **Get all products (Admin View):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/admin/all`
-    * **Description:** Retrieves a list of all products, potentially including administrative details.
-
-* **Get all products (User View):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/products/all`
-    * **Description:** Retrieves a list of all products intended for general users.
-
-* **Get specific product details:**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/products/{productId}`
-    * **Description:** Retrieves detailed information for a specific product. Replace `{productId}` with the actual ID of the product (e.g., `6` as in the example).
-    * **Example:** `http://localhost:3000/products/6`
-
-* **Get product information for editing (Admin):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/admin/edit/{productId}`
-    * **Description:** Retrieves product information for editing purposes in the admin interface. Replace `{productId}` with the actual ID of the product (e.g., `6` as in the example).
-    * **Example:** `http://localhost:3000/admin/edit/6`
+### User (shopper)
+* **Create a user account by signing in with Google**
+     *This allows you to view products in detail and access your shopping cart.
+ 
+### Admin
+* **Manually create an admin user in the database**
+     *A link to admin pages is located at the footer.
+     *Able to create a single product or bulk upload a product.
+     *Able to edit an existing product or delete a product.
+     *Has the functions of a guest and a regular user.
+     *Uploaded JSON files are stored in the uploads folder. 
