@@ -18,28 +18,31 @@
    * Changed "Model" to "model"
    * Changed categories table to only have name (dropped id)
 
-## <ins>Available Endpoints</ins>
+## <ins>Running the Application</ins>
 
-### GET Requests
+### Guest Access
+- **Default mode** — no login required.
+- Can:
+  - Browse products by category.
+  - Use the fish information API.
+- Cannot:
+  - View product details.
 
-* **Get all products (Admin View):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/admin/all`
-    * **Description:** Retrieves a list of all products, potentially including administrative details.
+---
 
-* **Get all products (User View):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/products/all`
-    * **Description:** Retrieves a list of all products intended for general users.
+### Shopper (User)
+- **Sign in with Google** to create a user account.
+- Gains access to:
+  - Product detail pages.
+  - Personal shopping cart.
 
-* **Get specific product details:**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/products/{productId}`
-    * **Description:** Retrieves detailed information for a specific product. Replace `{productId}` with the actual ID of the product (e.g., `6` as in the example).
-    * **Example:** `http://localhost:3000/products/6`
+---
 
-* **Get product information for editing (Admin):**
-    * **Method:** `GET`
-    * **Endpoint:** `http://localhost:3000/admin/edit/{productId}`
-    * **Description:** Retrieves product information for editing purposes in the admin interface. Replace `{productId}` with the actual ID of the product (e.g., `6` as in the example).
-    * **Example:** `http://localhost:3000/admin/edit/6`
+### Admin Access
+- **Create an admin user manually** in the database.
+- Admin capabilities:
+  - Access admin pages (via footer link).
+  - Create a single product or upload multiple via JSON.
+  - Edit or delete existing products.
+  - Includes all guest and shopper features.
+- Uploaded JSON files are saved to the `/uploads` folder.
