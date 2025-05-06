@@ -20,20 +20,29 @@
 
 ## <ins>Running the Application</ins>
 
-### Guest
-* **Guest user is the default**
-     *You can use the search for fish API.
-     *You can browse the products and get them by category.
-     * **Unable** to view the products in detail.
+### Guest Access
+- **Default mode** — no login required.
+- Can:
+  - Browse products by category.
+  - Use the fish information API.
+- Cannot:
+  - View product details.
 
-### User (shopper)
-* **Create a user account by signing in with Google**
-     *This allows you to view products in detail and access your shopping cart.
- 
-### Admin
-* **Manually create an admin user in the database**
-     *A link to admin pages is located at the footer.
-     *Able to create a single product or bulk upload a product.
-     *Able to edit an existing product or delete a product.
-     *Has the functions of a guest and a regular user.
-     *Uploaded JSON files are stored in the uploads folder. 
+---
+
+### Shopper (User)
+- **Sign in with Google** to create a user account.
+- Gains access to:
+  - Product detail pages.
+  - Personal shopping cart.
+
+---
+
+### Admin Access
+- **Create an admin user manually** in the database.
+- Admin capabilities:
+  - Access admin pages (via footer link).
+  - Create a single product or upload multiple via JSON.
+  - Edit or delete existing products.
+  - Includes all guest and shopper features.
+- Uploaded JSON files are saved to the `/uploads` folder.
