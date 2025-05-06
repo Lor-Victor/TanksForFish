@@ -38,20 +38,13 @@ app.use("/cart", cartRoutes);
 app.use("/home", homeRoutes);
 
 
-// app.get("/home", homeController.home);
-
 app.get("/", (req, res) => {
   req.session.returnTo = req.originalUrl;
   res.render("home", { title: 'Home Page', user: req.user, fish: null,  
     error: null,
     query: ''});
 });
-// app.get("/home", (req, res) => {
-//   res.render("home", {
-//     title: "Home",
-//     user: req.user 
-//   });
-// });
+
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, function () {
   console.log("App listening at http://localhost:" + PORT);
