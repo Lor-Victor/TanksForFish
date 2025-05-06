@@ -4,7 +4,6 @@ const router = express.Router();
 
 const tffController = require("../controllers/tff.controller");
 
-router.get("/home", tffController.home);
 router.get("/all", tffController.getAll);
 
 router.get("/", tffController.getAllByOneAttribute);

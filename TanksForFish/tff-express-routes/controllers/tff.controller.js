@@ -1,11 +1,6 @@
 "use strict";
 const model = require("../models/tff.models");
 
-function home(req, res, next) {
-  res.render("home", { title: "Home" });
-}
-
-
 function getAll(req, res, next) {
   try {
     let productList = model.getAll();
@@ -45,7 +40,6 @@ function getProductById(req, res, next) {
 }
 
 module.exports = {
-  home,
   getAll,
   getAllByOneAttribute,
   getProductById
