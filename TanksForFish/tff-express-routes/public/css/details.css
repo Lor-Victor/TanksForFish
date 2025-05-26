@@ -54,11 +54,12 @@ th {
     background-color: rgb(189, 236, 245);
     border: solid 1px ;
     border-radius: 5px;
-    margin-left: 85%;
+    margin-left: auto;
     width: fit-content;
     height: fit-content;
     padding: 1%;
     margin-top: auto;
+    /* white-space: nowrap; */
 }
 
 #cart-btn:hover{
@@ -68,4 +69,13 @@ th {
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+#quantity-input{
+    width: 25%;
+}
+
+#add-to-cart-form{
+    display: flex;
+    flex-direction: column;
 }

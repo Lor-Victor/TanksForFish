@@ -6,7 +6,7 @@ const checkoutForm = document.querySelector('#checkout-form');
 const delivery = document.getElementById('delivery');
 const pickUp = document.getElementById('pick-up');
 
-let subtotal = parseFloat(document.querySelector('#total').textContent); 
+let subtotal = parseFloat(document.querySelector('#total').textContent);
 let deliveryCharge = 0;
 const taxRate = 0.0675;
 
@@ -54,4 +54,3 @@ function updateFinalTotal() {
 
     document.querySelector('#total').textContent = finalTotal.toFixed(2);
 }
-
